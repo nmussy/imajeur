@@ -1,0 +1,31 @@
+.password-strength {
+	height: 3px;
+	display: block;
+	border: 2px solid;
+	border-radius: 2px;
+}
+
+.password-very-weak {
+	width: 10%;
+	border-color: #7F0000;
+}
+
+.password-weak {
+	width: 25%;
+	border-color: #FF371A;
+}
+
+.password-average {
+	width: 50%;
+	border-color: #FFE01A;
+}
+
+.password-strong {
+	width: 75%;
+	border-color: #00E01A;
+}
+
+.password-very-strong {
+	width: 100%;
+	border-color: #00BC16;
+}

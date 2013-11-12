@@ -98,15 +98,40 @@ textarea {
    ========================================================================== */
 
 
+.btn-primary {
+    background-color: #FF235E;
+    border-color: #7F1130;
+}
 
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #AD1842;
+    border-color: #7F1130;
+}
 
+.btn-default {
+    color: white;
+    background-color: #0026FF;
+    border-color: #001591;
+}
 
+.btn-default:hover,
+.btn-default:focus {
+    color: white;
+    background-color: #001BB5;
+    border-color: #001591;
+}
 
+.btn-success {
+    background-color: #5AFF44;
+    border-color: #3BA02B;
+}
 
-
-
-
-
+.btn-success:hover,
+.btn-success:focus {
+    background-color: #3DA82D;
+    border-color: #3BA02B;
+}
 
 
 
