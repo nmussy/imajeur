@@ -13,10 +13,10 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-        <link href="../lib/bootstrap-3.0.2/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/main.css">
+        <link href="lib/bootstrap-3.0.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
-        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <style>
             body {
                 background-color: #CCC;
@@ -66,66 +66,42 @@
           </div><!-- /.navbar-collapse -->
         </nav>
 
+        <div style="width: 3500px; overflow:hidden;poisition:absolute;top:0;left:0" id="background">
+          <span class="overlay" style="position:absolute;top:0;right:0;width:100%;height:100%;background-color:black;opacity:0.3;z-index:10"></span>
+          <img src="img/logo.png" style="position:absolute;top:0;left:0;max-width:150px"/>
+        </div>
+        <div class="text-center">
+            <h1 style="text-shadow:1px 1px 2px black"><span style="color:#0026FF">Imajeu</span><span style="color:#5AFF44">r</span></h1>
+            <h2>Imajeur est un site de stockage et de partage d'images en ligne</h2>
+            <h3>Bientôt sur vos écrans !</h3>
+            <h5>(Comme s'il n'en existait pas déjà assez...)</h5>
+        </div>
+        <hr />
+        <div class="form-group text-center">
+            <a class="btn btn-primary btn-lg disabled">Se connecter</a>
+            <a class="btn btn-success btn-lg disabled">S'inscrire</a>
+        </div>
 
-        <div id="center-block" style="margin-left: 10px;">
-          <h1>Inscription Imajeur</h1>
-          <form class="form-horizontal" role="form">
-            <div class="form-group">
-              <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-              <div class="col-sm-10" style="max-width: 300px">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-              </div>
-              <div class="col-sm-10" style="max-width: 300px">
-                <input type="email" class="form-control" id="inputEmailConfirmation" placeholder="Confirmation email">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputFirstName" class="col-sm-2 control-label">Nom</label>
-              <div class="col-sm-10" style="max-width: 300px">
-                <input type="text" class="form-control" id="inputFirstName" placeholder="Prénom">
-              </div>
-              <div class="col-sm-10" style="max-width: 300px">
-                <input type="text" class="form-control" id="inputLastName" placeholder="Nom de famille">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputFirstName" class="col-sm-2 control-label">Âge</label>
-              <div class="col-sm-10" style="max-width: 300px">
-                <input type="number" step="1" class="form-control" id="inputFirstName" placeholder="Âge">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputFirstName" class="col-sm-2 control-label">Sexe</label>
-              <div class="col-sm-10" style="max-width: 300px">
-                <select class="form-control">
-                  <option>Masculin</option>
-                  <option>Féminin</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputPassword" class="col-sm-2 control-label">Mot de passe</label>
-              <div class="col-sm-10" style="max-width: 300px">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe">
-                <span id="entropyMeter" title="Force de votre mot de passe. Au plus votre mot de passe est complexe, au plus il sera sûr. xkcd.com/936/‎" class="password-strength"></span>
-              </div>
-              <div class="col-sm-10" style="max-width: 300px">
-                <input type="password" class="form-control" id="inputPasswordConfirmation" placeholder="Confirmation mot de passe">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary">S'inscrire</button>
-                <span id="registerErrorField" style="padding-left:10px;">Erreur</span>
-              </div>
-            </div>
-          </form>
-      </div>
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="../js/plugins.js"></script>
-        <script src="../lib/bootstrap-3.0.2/js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="lib/bootstrap-3.0.2/js/bootstrap.min.js"></script>
+        <script>
+          $(document).one('ready', function() {
+            var images = ['cat-vet.jpg', 'tumblr_static_impress.jpg', 'Turkish_Van_Cat.jpg'],
+              maxHeight = 100;
+            for(var i = 0; i < Math.ceil($(window).height() / maxHeight); ++i) {
+              $('#background').append(generateRow());
+            }
+            function generateRow() {
+              var row = $('<div class="wallpaper-row"></div>');
+              for(var i = 0; i < 15; ++i) {
+                row.append('<img style=max-height:' + maxHeight + 'px;);"   src="data/' + images[Math.floor((Math.random()*images.length))] + '" />');
+              }
+              return row;
+            }
+          });
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
         <script>

@@ -103,6 +103,11 @@ textarea {
     border-color: #7F1130;
 }
 
+.btn-primary.disabled {
+    background-color: #FF235E;
+    border-color: #7F1130;
+}
+
 .btn-primary:hover,
 .btn-primary:focus {
     background-color: #AD1842;
@@ -111,6 +116,11 @@ textarea {
 
 .btn-default {
     color: white;
+    background-color: #0026FF;
+    border-color: #001591;
+}
+
+.btn-default.disabled {
     background-color: #0026FF;
     border-color: #001591;
 }
@@ -127,13 +137,20 @@ textarea {
     border-color: #3BA02B;
 }
 
+.btn-success.disabled {
+    background-color: #4FD83A;
+    border-color: #3BA02B;
+}
+
 .btn-success:hover,
 .btn-success:focus {
     background-color: #3DA82D;
     border-color: #3BA02B;
 }
 
-
+hr {
+    border-color: #FF235E;
+}
 
 
 
