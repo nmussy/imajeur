@@ -6,6 +6,7 @@ imajeur.fr
 * Mot de passe oublié
 * Recherche (imajeur, keyword, imaj, imajeurie)
 * Un système d'amis et/ou de favoris ?
+
 ## Optionnelles
 * Encryption des images, innaccessibles sur le serveur sans clé
 * Personalisation
@@ -19,6 +20,7 @@ imajeur.fr
 * Ajouter JSON3 pour IE lt 8
 * Ajouter une photo de profil lors de l'inscription ?
 * Ajouter fineuploader
+
 ## Joris
 
 # Lexik
