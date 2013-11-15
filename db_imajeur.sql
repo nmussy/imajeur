@@ -3,8 +3,8 @@ DROP DATABASE `db_imajeur`;
 CREATE DATABASE `db_imajeur`
   DEFAULT CHARACTER SET utf8
   DEFAULT COLLATE utf8_general_ci;
-/*
-CONNECT `db_imajeur`;*/
+
+CONNECT `db_imajeur`;
 
 START TRANSACTION;
 
@@ -50,7 +50,7 @@ CREATE TABLE `tbl_imaje_imajeurie` (
 
 CREATE TABLE `tbl_comment` (
     `COMMENT_id`           INTEGER UNSIGNED AUTO_INCREMENT,
-    `COMMENT_id_poster`    VARCHAR(1000),
+    `COMMENT_id_poster`    INTEGER UNSIGNED NOT NULL,
     `COMMENT_text`         VARCHAR(1000),
     `COMMENT_post_time`    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `COMMENT_edit_time`    TIMESTAMP,
@@ -109,3 +109,5 @@ CREATE TABLE `tbl_forgot_password` (
     PRIMARY KEY (`FORGOT_PASSWORD_id`),
     CONSTRAINT FOREIGN KEY (`FORGOT_PASSWORD_id_imajeur`) REFERENCES `tbl_imajeur` (`IMAJEUR_id`)
     );
+
+GRANT INSERT, SELECT, UPDATE ON db_imajeur.* TO php;
