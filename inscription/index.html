@@ -69,7 +69,7 @@
 
         <div id="center-block" style="margin-left: 10px;">
           <h1>Inscription Imajeur</h1>
-          <form class="form-horizontal" role="form">
+          <form id="registerForm" class="form-horizontal" role="form">
             <div class="form-group">
               <label for="inputEmail" class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10" style="max-width: 300px">
@@ -89,9 +89,21 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="inputFirstName" class="col-sm-2 control-label">Âge</label>
-              <div class="col-sm-10" style="max-width: 300px">
-                <input type="number" step="1" class="form-control" id="inputFirstName" placeholder="Âge">
+              <label for="inputFirstName" class="col-sm-2 control-label">Date de naissance</label>
+              <div class="col-sm-3" style="max-width: 120px">
+                <select id="selectDay" class="form-control">
+                  <option>Jour</option>
+                </select>
+              </div>
+              <div class="col-sm-3" style="max-width: 150px">
+                <select id="selectMonth" class="form-control">
+                  <option>Mois</option>
+                </select>
+              </div>
+              <div class="col-sm-3" style="max-width: 150px">
+                <select id="selectYear" class="form-control">
+                  <option>Année</option>
+                </select>
               </div>
             </div>
             <div class="form-group">
@@ -107,10 +119,19 @@
               <label for="inputPassword" class="col-sm-2 control-label">Mot de passe</label>
               <div class="col-sm-10" style="max-width: 300px">
                 <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe">
-                <span id="entropyMeter" title="Force de votre mot de passe. Au plus votre mot de passe est complexe, au plus il sera sûr. xkcd.com/936/‎" class="password-strength"></span>
+                <span id="entropyMeter" title="Force de votre mot de passe. Au plus votre mot de passe est complexe, au plus il sera sûr. xkcd.com/936/‎" class="password-strength help"></span>
               </div>
               <div class="col-sm-10" style="max-width: 300px">
                 <input type="password" class="form-control" id="inputPasswordConfirmation" placeholder="Confirmation mot de passe">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <input tabindex="4" type="checkbox"> Je souhaite rendre mon <span class="help .underlined-dots" title="Votre imajeur sera votre profil sur le site. Il contiendra vos informations, ainsi que les imajeuries que vous y ajouterez.">imajeur</span> publiquement visible
+                  </label>
+                </div>
               </div>
             </div>
             <div class="form-group">
@@ -127,14 +148,13 @@
         <script src="../lib/bootstrap-3.0.2/js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script> -->
+            ga('create','UA-45732265-1');ga('send','pageview');
+        </script>
     </body>
 </html>

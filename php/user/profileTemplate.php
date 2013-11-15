@@ -6,19 +6,20 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Imajeur</title>
+        <title>Imajeur - Inscription</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-        <link href="lib/bootstrap-3.0.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../lib/bootstrap-3.0.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
         <style>
             body {
-                background-color: #EEE;
+                background-color: #CCC;
                 overflow-x: hidden;
                 padding-top: 70px;
             }
@@ -28,8 +29,9 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-<!--
-        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
               <span class="sr-only">Toggle navigation</span>
@@ -37,12 +39,12 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><span style="color:#0026FF">Imajeu</span><span style="color:#5AFF44">r</span></a>
+            <a class="navbar-brand" href="#"><span style="color:#0026FF">Imajeu</span><span style="color:#5AFF44">r</span> &ndash; Inscription</a>
           </div>
 
+          <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li><a href="#">Inscription</a></li>
               <li><a href="#">Imajeur aléatoire</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Qu'est-ce que Imajeur ? <b class="caret"></b></a>
@@ -59,34 +61,22 @@
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Connexion</a></li>
+              <li><a href="#">Mon imajeur</a></li>
             </ul>
-          </div>
-        </nav>-->
-
-        <div class="row">
-            <img class="img-responsive col-md-4 col-md-offset-4" style="padding:50px" src="img/logo.png" />
-        </div>
-        <div class="text-center">
-            <h1 style="text-shadow:1px 1px 2px black"><span style="color:#0026FF">Imajeu</span><span style="color:#5AFF44">r</span></h1>
-            <h2>Imajeur est un site de stockage et de partage d'images en ligne</h2>
-            <h3>Bientôt sur vos écrans !</h3>
-            <h5>(Comme s'il n'en existait pas déjà assez...)</h5>
-        </div>
-        <hr />
-        <div class="form-group text-center">
-            <a class="btn btn-primary btn-lg disabled">Se connecter</a>
-            <a class="btn btn-success btn-lg disabled">S'inscrire</a>
-        </div>
+          </div><!-- /.navbar-collapse -->
+        </nav>
 
 
+        <div id="center-block" style="margin-left: 10px;">
+        	<h1><?php echo $USERNAME; ?><h1>
+        	<img src="<?php echo $AVATAR; ?>" />
+      </div>
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="lib/bootstrap-3.0.2/js/bootstrap.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="../js/plugins.js"></script>
+        <script src="../lib/bootstrap-3.0.2/js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -97,4 +87,3 @@
         </script>
     </body>
 </html>
-<script>

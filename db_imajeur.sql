@@ -9,32 +9,49 @@ CONNECT `db_imajeur`;*/
 START TRANSACTION;
 
 CREATE TABLE `tbl_user` (
-    `USER_id`         INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-    `USER_email`      VARCHAR(256) NOT NULL,
-    `USER_first_name` VARCHAR(100) NOT NULL,
-    `USER_last_name`  VARCHAR(100) NOT NULL,
-    `USER_hash`       VARCHAR(256) NOT NULL,
-    `USER_salt`       VARCHAR(256) NOT NULL,
+    `USER_id`          INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+    `USER_email`       VARCHAR(256) NOT NULL,
+    `USER_first_name`  VARCHAR(100) NOT NULL,
+    `USER_last_name`   VARCHAR(100) NOT NULL,
+    `USER_dob`         DATE NOT NULL,
+    `USER_gender`      VARCHAR(100) NOT NULL,
+    `USER_hash`        VARCHAR(256) NOT NULL,
+    `USER_salt`        VARCHAR(256) NOT NULL,
     /*`USER_rights`    VARCHAR(20) NOT NULL DEFAULT 'USER', -- & 'ADMIN' & 'MOD'*/
-    `USER_public`    BOOL NOT NULL DEFAULT TRUE,
-    `USER_avatar_path`  VARCHAR(256),
+    `USER_public`      BOOL NOT NULL DEFAULT TRUE,
+    `USER_avatar_path` VARCHAR(256),
     PRIMARY KEY (`USER_id`)
     );
 
-CREATE TABLE `tbl_picture` (
-    `PICTURE_id`      INTEGER UNSIGNED AUTO_INCREMENT,
-    `PICTURE_id_user` INTEGER UNSIGNED NOT NULL,
-    PRIMARY KEY (`PICTURE_id`),
-    CONSTRAINT FOREIGN KEY (`PICTURE_id_user`) REFERENCES `tbl_user` (`USER_id`),
+CREATE TABLE `tbl_imaje` (
+    `IMAJE_id`      INTEGER UNSIGNED AUTO_INCREMENT,
+    `IMAJE_id_user` INTEGER UNSIGNED NOT NULL,
+    PRIMARY KEY (`IMAJE_id`),
+    CONSTRAINT FOREIGN KEY (`IMAJE_id_user`) REFERENCES `tbl_user` (`USER_id`)
     );
 
-CREATE TABLE `tbl_keyword` (
-    `KEYWORD_id` INTEGER UNSIGNED AUTO_INCREMENT,
-    `KEYWORD_fr` VARCHAR(100),
-    `KEYWORD_en` VARCHAR(100),
-    PRIMARY KEY (`KEYWORD_id`),
-    UNIQUE KEY (`KEYWORD_fr`),
-    UNIQUE KEY (`KEYWORD_en`)
+CREATE TABLE `tbl_imajeurie` (
+    `IMAJEURIE_id`      INTEGER UNSIGNED AUTO_INCREMENT,
+    `IMAJEURIE_name`    INTEGER UNSIGNED NOT NULL,
+    `IMAJEURIE_id_user` INTEGER UNSIGNED NOT NULL,
+    PRIMARY KEY (`IMAJEURIE_id`),
+    CONSTRAINT FOREIGN KEY (`IMAJEURIE_id_user`) REFERENCES `tbl_user` (`USER_id`)
+    );
+
+CREATE TABLE `tbl_imaje_imajeurie` (
+    `IMAJE_IMAJEURIE_id` INTEGER UNSIGNED AUTO_INCREMENT,
+    `IMAJE_id`           INTEGER UNSIGNED NOT NULL,
+    `IMAJEURIE_id`       INTEGER UNSIGNED NOT NULL,
+    PRIMARY KEY (`IMAJE_IMAJEURIE_id`),
+    CONSTRAINT FOREIGN KEY (`IMAJE_id`) REFERENCES `tbl_imaje` (`IMAJE_id`),
+    CONSTRAINT FOREIGN KEY (`IMAJEURIE_id`) REFERENCES `tbl_imajeurie` (`IMAJEURIE_id`)
+    );
+
+CREATE TABLE `tbl_hastag` (
+    `HASTAG_id`    INTEGER UNSIGNED AUTO_INCREMENT,
+    `HASTAG_value` VARCHAR(100),
+    PRIMARY KEY (`HASTAG_id`),
+    UNIQUE KEY (`HASTAG_value`)
     );
 
 CREATE TABLE `tbl_haskeyword` (

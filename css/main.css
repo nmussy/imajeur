@@ -152,7 +152,18 @@ hr {
     border-color: #FF235E;
 }
 
+.help {
+    cursor: help;
+}
 
+.underlined-dots {
+    text-decoration: none;
+    border-bottom: 1px dotted #CCC;
+}
+
+.underlined {
+    text-decoration: underline;
+}
 
 
 /* ==========================================================================

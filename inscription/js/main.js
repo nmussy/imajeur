@@ -1,6 +1,9 @@
 $(document).one('ready', function() {
+    generateDOBSelect();
     $('#inputPassword').on('input', updateEntropyMeter);
     $('#inputEmailConfirmation, #inputPasswordConfirmation, #inputEmail, #inputPassword').on('input', updateConfirmationState);
+    $('#selectMonth').on('change', updateNumberOfDays);
+    $('#registerForm').one('submit', sumbitRegister);
 });
 
 function updateEntropyMeter() {
@@ -68,4 +71,56 @@ function scorePassword(pass) {
     score += (variationCount - 1) * 10;
 
     return parseInt(score, 10);
+}
+
+function sumbitRegister(e) {
+    console.log($('#registerForm').serialize());
+    if($('#inputEmail').val().length === 0 ||
+        $('#inputEmail').val() !== $('#inputEmailConfirmation').val()) {
+        $('#inputEmail').focus();
+        $('#registerErrorField').html('Votre adresse email ne ne correspond pas à sa confirmation');
+        return false;
+    }
+    if($('#inputPassword').val().length < 6 ||
+        $('#inputPassword').val() !== $('#inputPasswordConfirmation').val()) {
+        $('#inputPassword').focus();
+        $('#registerErrorField').html('Votre mot de passe est trop faible ou ne ne correspond pas à sa confirmation');
+        return false;
+    }
+
+    /*$.ajax({
+        url: '../php/user/inscription.php',
+        type: 'post',
+        data: $('#registerForm').serialize(),
+        success: successRegister
+    });*/
+    return false;
+}
+
+function successRegister(data) {
+    data = JSON.parse(data);
+}
+
+function generateDOBSelect() {
+    for(var i = 1; i <= 31; ++i)
+        $('#selectDay').append('<option>' + i + '</option>');
+    var months = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août",
+        "Septembre", "Octobre", "Novembre", "Décembre"];
+    for(i = 1; i <= 12; ++i)
+        $('#selectMonth').append('<option data-month="' + i + '">' + months[i] + '</option>');
+    for(i = 2013; i >= 1950; --i)
+        $('#selectYear').append('<option>' + i + '</option>');
+}
+
+function updateNumberOfDays() {
+    console.log('update');
+    var numberOfDays = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+        updatedNumberOfDays = numberOfDays[$('#selectMonth').children(':selected').data('month') - 1];
+    if(updatedNumberOfDays > $('#selectDay').children().length - 1) {
+        for(var i = $('#selectDay').children().length; i <= updatedNumberOfDays; ++i)
+            $('#selectDay').append('<option>' + i + '</option>');
+    } else if(updatedNumberOfDays < $('#selectDay').children().length - 1) {
+        for(var j = $('#selectDay').children().length; j > updatedNumberOfDays; --j)
+            $($('#selectDay').children()[j]).remove();
+    }
 }
