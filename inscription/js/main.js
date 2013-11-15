@@ -80,11 +80,17 @@ function updateGender() {
 }
 
 function sumbitRegister(e) {
+    e.preventDefault();
     console.log($('#registerForm').serializeArray());
     if($('#inputEmail').val().length === 0 ||
         $('#inputEmail').val() !== $('#inputEmailConfirmation').val()) {
         $('#inputEmail').focus();
         $('#registerErrorField').html('Votre adresse email ne ne correspond pas à sa confirmation');
+        return false;
+    }
+    if($('#selectDay').val() === "Jour" || $('#selectMonth').val() === "Mois" || $('#selectYear').val() === "Année") {
+        $('#selectDay').focus();
+        $('#registerErrorField').html('Vous devez entrer une date de naissance');
         return false;
     }
     if($('#selectGender').children('.disabled').length === 0) {
@@ -97,22 +103,16 @@ function sumbitRegister(e) {
         $('#registerErrorField').html('Votre mot de passe est trop faible ou ne ne correspond pas à sa confirmation');
         return false;
     }
-    if($('#selectDay').val() === "Jour" || $('#selectMonth').val() === "Mois" || $('#selectYear').val() === "Année") {
-        $('#selectDay').focus();
-        $('#registerErrorField').html('Vous devez entrer une date de naissance');
-        return false;
-    }
 
-    var data = $('#registerForm').serialize();
+    var data = $('#registerForm').serializeArray();
     data.push({'name': 'gender', 'value': $('#selectGender').children('.disabled').data('value')});
 
     $.ajax({
         url: '../php/user/inscription.php',
         type: 'post',
-        data: $('#registerForm').serialize(),
+        data: data,
         success: successRegister
     });
-    return false;
 }
 
 function successRegister(data) {

@@ -1,6 +1,6 @@
 <?php
 	require_once '../mysql_password.php';
-	$imajeur_conn = new PDO('mysql:host=localhost;dbname=db_imajeur;charset=utf8', 'ftp', $MYSQL_PASS);
+	$imajeur_conn = new PDO('mysql:host=localhost;dbname=db_imajeur;charset=utf8', 'php', $MYSQL_PASS);
 	$imajeur_conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	$register_user_stmt = $imajeur_conn->prepare(
@@ -18,11 +18,10 @@
 
 	$email_salt = mcrypt_create_iv(48, MCRYPT_DEV_URANDOM);
 	$email_hash = md5($_REQUEST['email'] . $email_salt);
-
 	$register_user_stmt->bindParam(':hash', $imajeur_hash);
 	$register_user_stmt->bindParam(':salt', $imajeur_salt);
 
-	$register_user_stmt->bindParam(':public', isset($_REQUEST['public']) && $_REQUEST['public'] == 'on' ? TRUE : FALSE));
+	$register_user_stmt->bindParam(':public', (isset($_REQUEST['public']) && $_REQUEST['public'] == 'on' ? TRUE : FALSE));
 	$register_user_stmt->bindParam(':avatar_path', 'LOLZ');
 	$register_user_stmt->execute();
 ?>
