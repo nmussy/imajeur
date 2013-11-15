@@ -3,7 +3,7 @@ $(document).one('ready', function() {
     $('#inputPassword').on('input', updateEntropyMeter);
     $('#inputEmailConfirmation, #inputPasswordConfirmation, #inputEmail, #inputPassword').on('input', updateConfirmationState);
     $('#selectMonth').on('change', updateNumberOfDays);
-    $('#registerForm').one('submit', sumbitRegister);
+    $('#registerForm').on/*e*/('submit', sumbitRegister);
 });
 
 function updateEntropyMeter() {
@@ -74,7 +74,7 @@ function scorePassword(pass) {
 }
 
 function sumbitRegister(e) {
-    console.log($('#registerForm').serialize());
+    console.log($('#registerForm').serializeArray());
     if($('#inputEmail').val().length === 0 ||
         $('#inputEmail').val() !== $('#inputEmailConfirmation').val()) {
         $('#inputEmail').focus();
@@ -85,6 +85,11 @@ function sumbitRegister(e) {
         $('#inputPassword').val() !== $('#inputPasswordConfirmation').val()) {
         $('#inputPassword').focus();
         $('#registerErrorField').html('Votre mot de passe est trop faible ou ne ne correspond pas à sa confirmation');
+        return false;
+    }
+    if($('#selectDay').val() === "Jour" || $('#selectMonth').val() === "Mois" || $('#selectYear').val() === "Année") {
+        $('#selectDay').focus();
+        $('#registerErrorField').html('Vous devez entrer une date de naissance');
         return false;
     }
 

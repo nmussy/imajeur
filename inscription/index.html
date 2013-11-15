@@ -73,7 +73,7 @@
             <div class="form-group">
               <label for="inputEmail" class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10" style="max-width: 300px">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email">
               </div>
               <div class="col-sm-10" style="max-width: 300px">
                 <input type="email" class="form-control" id="inputEmailConfirmation" placeholder="Confirmation email">
@@ -82,34 +82,34 @@
             <div class="form-group">
               <label for="inputFirstName" class="col-sm-2 control-label">Nom</label>
               <div class="col-sm-10" style="max-width: 300px">
-                <input type="text" class="form-control" id="inputFirstName" placeholder="Prénom">
+                <input name="firstName" type="text" class="form-control" id="inputFirstName" placeholder="Prénom">
               </div>
               <div class="col-sm-10" style="max-width: 300px">
-                <input type="text" class="form-control" id="inputLastName" placeholder="Nom de famille">
+                <input name="lastName" type="text" class="form-control" id="inputLastName" placeholder="Nom de famille">
               </div>
             </div>
             <div class="form-group">
-              <label for="inputFirstName" class="col-sm-2 control-label">Date de naissance</label>
+              <label for="selectDay" class="col-sm-2 control-label">Date de naissance</label>
               <div class="col-sm-3" style="max-width: 120px">
-                <select id="selectDay" class="form-control">
+                <select name="dobDay" id="selectDay" class="form-control">
                   <option>Jour</option>
                 </select>
               </div>
               <div class="col-sm-3" style="max-width: 150px">
-                <select id="selectMonth" class="form-control">
+                <select name="dobMonth" id="selectMonth" class="form-control">
                   <option>Mois</option>
                 </select>
               </div>
               <div class="col-sm-3" style="max-width: 150px">
-                <select id="selectYear" class="form-control">
+                <select name="dobYear" id="selectYear" class="form-control">
                   <option>Année</option>
                 </select>
               </div>
             </div>
             <div class="form-group">
-              <label for="inputFirstName" class="col-sm-2 control-label">Sexe</label>
+              <label for="selectGender" class="col-sm-2 control-label">Sexe</label>
               <div class="col-sm-10" style="max-width: 300px">
-                <select class="form-control">
+                <select name="gender" id="selectGender" class="form-control">
                   <option>Masculin</option>
                   <option>Féminin</option>
                 </select>
@@ -118,7 +118,7 @@
             <div class="form-group">
               <label for="inputPassword" class="col-sm-2 control-label">Mot de passe</label>
               <div class="col-sm-10" style="max-width: 300px">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe">
+                <input name="password" type="password" class="form-control" id="inputPassword" placeholder="Mot de passe">
                 <span id="entropyMeter" title="Force de votre mot de passe. Au plus votre mot de passe est complexe, au plus il sera sûr. xkcd.com/936/‎" class="password-strength help"></span>
               </div>
               <div class="col-sm-10" style="max-width: 300px">
@@ -129,7 +129,7 @@
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                   <label>
-                    <input tabindex="4" type="checkbox"> Je souhaite rendre mon <span class="help .underlined-dots" title="Votre imajeur sera votre profil sur le site. Il contiendra vos informations, ainsi que les imajeuries que vous y ajouterez.">imajeur</span> publiquement visible
+                    <input type="checkbox"> Je souhaite rendre mon <span class="help .underlined-dots" title="Votre imajeur sera votre profil sur le site. Il contiendra vos informations, ainsi que les imajeuries que vous y ajouterez.">imajeur</span> publiquement visible
                   </label>
                 </div>
               </div>
