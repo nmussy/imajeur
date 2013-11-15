@@ -106,12 +106,12 @@ function sumbitRegister(e) {
     var data = $('#registerForm').serialize();
     data.push({'name': 'gender', 'value': $('#selectGender').children('.disabled').data('value')});
 
-    /*$.ajax({
+    $.ajax({
         url: '../php/user/inscription.php',
         type: 'post',
         data: $('#registerForm').serialize(),
         success: successRegister
-    });*/
+    });
     return false;
 }
 
@@ -122,10 +122,8 @@ function successRegister(data) {
 function generateDOBSelect() {
     for(var i = 1; i <= 31; ++i)
         $('#selectDay').append('<option>' + i + '</option>');
-    var months = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août",
-        "Septembre", "Octobre", "Novembre", "Décembre"];
     for(i = 1; i <= 12; ++i)
-        $('#selectMonth').append('<option data-month="' + i + '">' + months[i] + '</option>');
+        $('#selectMonth').append('<option>' + i + '</option>');
     for(i = 2013; i >= 1920; --i)
         $('#selectYear').append('<option>' + i + '</option>');
 }
@@ -133,7 +131,7 @@ function generateDOBSelect() {
 function updateNumberOfDays() {
     console.log('update');
     var numberOfDays = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-        updatedNumberOfDays = numberOfDays[$('#selectMonth').children(':selected').data('month') - 1];
+        updatedNumberOfDays = numberOfDays[$('#selectMonth').children(':selected').html() - 1];
     if(updatedNumberOfDays > $('#selectDay').children().length - 1) {
         for(var i = $('#selectDay').children().length; i <= updatedNumberOfDays; ++i)
             $('#selectDay').append('<option>' + i + '</option>');

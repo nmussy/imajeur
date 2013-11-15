@@ -18,14 +18,17 @@ CREATE TABLE `tbl_imajeur` (
     `IMAJEUR_hash`         VARCHAR(256) NOT NULL,
     `IMAJEUR_salt`         VARCHAR(256) NOT NULL,
     /*`IMAJEUR_rights`     VARCHAR(20) NOT NULL DEFAULT 'USER', -- & 'ADMIN' & 'MOD'*/
-    `IMAJEUR_public`       BOOL NOT NULL DEFAULT TRUE,
+    `IMAJEUR_public`       BOOL NOT NULL DEFAULT FALSE,
     `IMAJEUR_avatar_path`  VARCHAR(256),
     `IMAJEUR_registration` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`IMAJEUR_id`)
     );
 
 CREATE TABLE `tbl_imaje` (
-    `IMAJE_id`      INTEGER UNSIGNED AUTO_INCREMENT,
+    `IMAJE_id`         INTEGER UNSIGNED AUTO_INCREMENT,
+    `IMAJE_path`       VARCHAR(256) NOT NULL,
+    `IMAJE_name`       VARCHAR(256) NOT NULL,
+    `IMAJE_encrypted`  BOOLEAN NOT NULL DEFAULT FALSE,
     `IMAJE_id_imajeur` INTEGER UNSIGNED NOT NULL,
     PRIMARY KEY (`IMAJE_id`),
     CONSTRAINT FOREIGN KEY (`IMAJE_id_imajeur`) REFERENCES `tbl_imajeur` (`IMAJEUR_id`)
