@@ -218,6 +218,9 @@ hr {
     cursor: help;
 }
 
+.disabled {
+    cursor: default;
+}
 .underlined-dots {
     text-decoration: none;
     border-bottom: 1px dotted #CCC;
