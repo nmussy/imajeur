@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+f/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -97,7 +97,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 .btn-primary {
     background-color: #FF235E;
     border-color: #7F1130;
@@ -146,6 +145,22 @@ textarea {
 .btn-success:focus {
     background-color: #3DA82D;
     border-color: #3BA02B;
+}
+
+.btn-grey {
+    background-color: #EEE;
+    border-color: #AAA;
+}
+
+.btn-grey.disabled {
+    background-color: #AAA;
+    border-color: #777;
+}
+
+.btn-grey:hover,
+.btn-grey:focus {
+    background-color: #DDD;
+    border-color: #AAA;
 }
 
 hr {

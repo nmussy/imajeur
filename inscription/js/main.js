@@ -3,6 +3,7 @@ $(document).one('ready', function() {
     $('#inputPassword').on('input', updateEntropyMeter);
     $('#inputEmailConfirmation, #inputPasswordConfirmation, #inputEmail, #inputPassword').on('input', updateConfirmationState);
     $('#selectMonth').on('change', updateNumberOfDays);
+    $('#selectGender').on('click', '.btn:not(.disabled)', updateGender);
     $('#registerForm').on/*e*/('submit', sumbitRegister);
 });
 
@@ -73,12 +74,21 @@ function scorePassword(pass) {
     return parseInt(score, 10);
 }
 
+function updateGender() {
+    $('#selectGender').children('.disabled').removeClass('disabled');
+    $(this).addClass('disabled');
+}
+
 function sumbitRegister(e) {
     console.log($('#registerForm').serializeArray());
     if($('#inputEmail').val().length === 0 ||
         $('#inputEmail').val() !== $('#inputEmailConfirmation').val()) {
         $('#inputEmail').focus();
         $('#registerErrorField').html('Votre adresse email ne ne correspond pas à sa confirmation');
+        return false;
+    }
+    if($('#selectGender').children('.disabled').length === 0) {
+        $('#registerErrorField').html('Vous devez séléctionner votre sexe');
         return false;
     }
     if($('#inputPassword').val().length < 6 ||
@@ -92,6 +102,9 @@ function sumbitRegister(e) {
         $('#registerErrorField').html('Vous devez entrer une date de naissance');
         return false;
     }
+
+    var data = $('#registerForm').serialize();
+    data.push({'name': 'gender', 'value': $('#selectGender').children('.disabled').data('value')});
 
     /*$.ajax({
         url: '../php/user/inscription.php',
@@ -113,7 +126,7 @@ function generateDOBSelect() {
         "Septembre", "Octobre", "Novembre", "Décembre"];
     for(i = 1; i <= 12; ++i)
         $('#selectMonth').append('<option data-month="' + i + '">' + months[i] + '</option>');
-    for(i = 2013; i >= 1950; --i)
+    for(i = 2013; i >= 1920; --i)
         $('#selectYear').append('<option>' + i + '</option>');
 }
 

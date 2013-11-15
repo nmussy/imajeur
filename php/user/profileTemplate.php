@@ -50,7 +50,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Qu'est-ce que Imajeur ? <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Fonctionalités</a></li>
-                  <li><a href="#">Vie privé</a></li>
+                  <li><a href="#">Vie privée</a></li>
                   <li><a href="#">Qui sommes-nous ?</a></li>
                   <li class="divider"></li>
                   <li><a href="#">API développeur</a></li>

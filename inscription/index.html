@@ -50,7 +50,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Qu'est-ce que Imajeur ? <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Fonctionalités</a></li>
-                  <li><a href="#">Vie privé</a></li>
+                  <li><a href="#">Vie privée</a></li>
                   <li><a href="#">Qui sommes-nous ?</a></li>
                   <li class="divider"></li>
                   <li><a href="#">API développeur</a></li>
@@ -108,11 +108,13 @@
             </div>
             <div class="form-group">
               <label for="selectGender" class="col-sm-2 control-label">Sexe</label>
-              <div class="col-sm-10" style="max-width: 300px">
-                <select name="gender" id="selectGender" class="form-control">
+              <div id="selectGender" class="col-sm-10 btn-group" style="max-width: 300px">
+                <a class="btn btn-grey" data-value="male" style="color:blue;">&#9794;</a>
+                <a class="btn btn-grey"  data-value="female" style="color:pink;">&#9792;</a>
+<!--                 <select name="gender" id="selectGender" class="form-control">
                   <option>Masculin</option>
                   <option>Féminin</option>
-                </select>
+                </select> -->
               </div>
             </div>
             <div class="form-group">
@@ -129,7 +131,7 @@
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox"> Je souhaite rendre mon <span class="help .underlined-dots" title="Votre imajeur sera votre profil sur le site. Il contiendra vos informations, ainsi que les imajeuries que vous y ajouterez.">imajeur</span> publiquement visible
+                    <input name="public" type="checkbox"> Je souhaite rendre mon <span class="help underlined-dots" title="Votre imajeur sera votre profil sur le site. Il contiendra vos informations, ainsi que les imajeuries que vous y ajouterez.">imajeur</span> publiquement visible
                   </label>
                 </div>
               </div>
