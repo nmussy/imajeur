@@ -98,8 +98,35 @@ textarea {
    ========================================================================== */
 
 .has-success {
-    background-color: #5AFF44;
-    border-color: #3BA02B;
+    border-color: #00FF77;
+}
+
+.navbar-default
+.navbar-nav>li>a {
+    color:#428bca;
+}
+
+.navbar-default
+.navbar-nav>li>a:hover {
+    color:#4107F0;
+}
+
+.navbar-default
+.navbar-brand {
+    color: #FF235E;
+}   
+
+.navbar-default
+.navbar-brand:hover {
+    color: #DC1179;
+}
+
+/*
+DC1179
+FF0004*/
+
+.dropdown-menu>li>a {
+    color:#4107F0;
 }
 
 body{
@@ -109,7 +136,6 @@ body{
 }
 
 .success {
-    background-color: #5AFF44;
     border-color: #3BA02B;
 }
 
