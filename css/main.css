@@ -97,6 +97,26 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.has-success {
+    background-color: #5AFF44;
+    border-color: #3BA02B;
+}
+
+body{
+    background-color: #FCF0FC;
+    overflow-x: hidden;
+    padding-top: 70px;
+}
+
+.success {
+    background-color: #5AFF44;
+    border-color: #3BA02B;
+}
+
+.form-control:focus{
+    border-color: #7F1130;
+}
+
 
 .btn-primary {
     background-color: #FF235E;
@@ -148,6 +168,7 @@ textarea {
     border-color: #3BA02B;
 }
 
+    
 hr {
     border-color: #FF235E;
 }
