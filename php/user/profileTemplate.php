@@ -13,8 +13,8 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-        <link href="../lib/bootstrap-3.0.2/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/main.css">
+        <link href="../../lib/bootstrap-3.0.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/main.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
         <style>
@@ -68,8 +68,8 @@
 
 
         <div id="center-block" style="margin-left: 10px;">
-        	<h1><?php echo $USERNAME; ?><h1>
-        	<img src="<?php echo $AVATAR; ?>" />
+        	<h1><?=$_REQUEST['name']?><h1>
+        	<img src="<?=$_REQUEST['name']?>" />
       </div>
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
