@@ -5,6 +5,8 @@ $(document).one('ready', function() {
     $('#selectMonth').on('change', updateNumberOfDays);
     $('#selectGender').on('click', '.btn:not(.disabled)', updateGender);
     $('#registerForm').on/*e*/('submit', sumbitRegister);
+
+    $("#inputAvatar").fineUploader({uploaderType: 'basic', debug: truer});
 });
 
 function updateEntropyMeter() {
