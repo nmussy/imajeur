@@ -1,4 +1,11 @@
 <?php
+//pour test !!
+require "./profileTemplate.php";
+
+echo "test";
+createProfile("Bobb","lstName","Pseudal","202020","avatar","isPublic");
+
+
 	require_once '../mysql_password.php';
 	$imajeur_conn = new PDO('mysql:host=localhost;dbname=db_imajeur;charset=utf8', 'php', $MYSQL_PASS);
 	$imajeur_conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
