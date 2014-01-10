@@ -87,22 +87,22 @@ function sumbitRegister(e) {
     if($('#inputEmail').val().length === 0 ||
         $('#inputEmail').val() !== $('#inputEmailConfirmation').val()) {
         $('#inputEmail').focus();
-        $('#registerErrorField').html('Votre adresse email ne ne correspond pas à sa confirmation');
+        $('#errorField').html('Votre adresse email ne ne correspond pas à sa confirmation');
         return false;
     }
     if($('#selectDay').val() === "Jour" || $('#selectMonth').val() === "Mois" || $('#selectYear').val() === "Année") {
         $('#selectDay').focus();
-        $('#registerErrorField').html('Vous devez entrer une date de naissance');
+        $('#errorField').html('Vous devez entrer une date de naissance');
         return false;
     }
     if($('#selectGender').children('.disabled').length === 0) {
-        $('#registerErrorField').html('Vous devez séléctionner votre sexe');
+        $('#errorField').html('Vous devez séléctionner votre sexe');
         return false;
     }
     if($('#inputPassword').val().length < 6 ||
         $('#inputPassword').val() !== $('#inputPasswordConfirmation').val()) {
         $('#inputPassword').focus();
-        $('#registerErrorField').html('Votre mot de passe est trop faible ou ne ne correspond pas à sa confirmation');
+        $('#errorField').html('Votre mot de passe est trop faible ou ne ne correspond pas à sa confirmation');
         return false;
     }
 
