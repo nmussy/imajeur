@@ -1,0 +1,212 @@
+.dvb_viewone {
+    position: absolute;
+}
+
+.dvb_viewone * {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
+.dvb_viewone_image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.dvb_viewone_image-container > img {
+    cursor: move;
+}
+
+.dvb_viewone > .dvb_viewone_interfaces > .dvb_viewone_minimap {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 150px;
+    height: 150px;
+}
+
+.dvb_viewone_minimap-image {
+    height: auto;
+    width: auto;
+    cursor: pointer;
+}
+
+.dvb_viewone_minimap-selector {
+    background: #95C11E;
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: alpha(opacity=50);
+                opacity: 0.5;
+}
+
+.dvb_viewone_minimap-selector.udraggable-dragging {
+    cursor: pointer;
+}
+
+
+.dvb_viewone > .dvb_viewone_interfaces {
+    z-index: 10;
+    position: absolute;
+    background-color: #009ee3;
+    padding: 8px;
+    width: 150px;
+    height: 122px;
+}
+
+.dvb_viewone_bumper {
+    visibility: hidden;
+}
+
+.dvb_viewone_html-hslider,
+.dvb_viewone_html-vslider {
+    width: 130px;
+}
+
+.dvb_viewone_html-vslider {
+    -webkit-transform:rotate(270deg);
+       -moz-transform:rotate(270deg);
+        -ms-transform:rotate(270deg);
+         -o-transform:rotate(270deg);
+            transform:rotate(270deg);
+}
+
+.dvb_viewone > .dvb_viewone_interfaces > .dvb_viewone_zoom-interface {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    width: 134px;
+}
+
+.dvb_viewone_jqueryui-hslider {
+    height: 12px !important;
+}
+
+.ui-slider-handle {
+    top: -3px !important;
+    width: 18px !important;
+    height: 18px !important;
+    border: 0 !important;
+    background: url(http://www.devisubox.com/dv/resource/js/dvb_viewone/img/jqueryui_slider-cursor.png) 100% 100% no-repeat !important;
+}
+
+.ui-slider-handle:focus {
+    outline: 0;
+}
+
+.dvb_viewone_close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    -webkit-appearance: none;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 12px;
+    width: 20px;
+    background-color: #CCC;
+    filter: alpha(opacity=80);
+                opacity: 0.8;
+}
+
+.dvb_view_toolbar > .dvb_viewone_interfaces > .dvb_viewone_minimap {
+    position: absolute;
+}
+
+
+.dvb_view_toolbar > .dvb_viewone_interfaces > .dvb_viewone_zoom-interface {/*
+    width: 134px;
+    padding-left: 95px;
+    padding-top: 18px;*/
+    padding-left: 78px;
+}
+
+.svg {
+    background-size: contain;
+}
+
+.dvb_viewone_zoom-buttons {
+    display: inline-block;
+    width: 28px;
+    height: 52px;
+    cursor: pointer;
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_viewone/img/icons/zoom.png);
+}
+
+.dvb_viewone_zoom-buttons.svg {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_viewone/img/icons/zoom.svg);
+}
+
+/*
+
+.dvb_viewone_zoom-minus {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_viewone/img/zoom_out.png);
+}
+
+.dvb_viewone_zoom-adjust {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_viewone/img/zoom_adjust.png);
+}
+
+.dvb_viewone_zoom-plus {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_viewone/img/zoom_in.png);
+}
+
+.dvb_viewone_zoom-minus.svg {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_viewone/img/zoom_out.svg);
+}
+
+.dvb_viewone_zoom-adjust.svg {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_viewone/img/zoom_adjust.svg);
+}
+
+.dvb_viewone_zoom-plus.svg {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_viewone/img/zoom_in.svg);
+}*/
+
+.dvb_viewone_drag-message {
+    color: #EEE;
+    text-shadow: black 2px 2px 2px;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+.dvb_viewone_drag-message.disabled {
+    color: #999;
+}
+
+.dvb_viewone_drag-message.left,
+.dvb_viewone_drag-message.right{
+    top: 50%;
+}
+
+
+.dvb_viewone_drag-message.left {
+    left: 0;
+}
+
+.dvb_viewone_drag-message.right {
+    right: 0;
+}
+
+.dvb_viewone_drag-message.top,
+.dvb_viewone_drag-message.bottom {
+    left: 50%;
+}
+
+.dvb_viewone_drag-message.top {
+    top: 0;
+}
+
+.dvb_viewone_drag-message.bottom {
+    bottom: 60px;
+}

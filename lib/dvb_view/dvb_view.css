@@ -1,0 +1,555 @@
+.dvb_view {
+    position: absolute;
+}
+
+.dvb_view * {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
+.dvb_view > .dvb_view_menu,
+.dvb_view > .dvb_view_date,
+.dvb_view > .dvb_view_social {
+    z-index: 1;
+}
+
+.dvb_view > .dvb_view_logo,
+.dvb_view > .dvb_view_date,
+.dvb_view > .dvb_view_watermark {
+    filter: alpha(opacity=60);
+                opacity: 0.6;
+}
+
+.dvb_view > .dvb_view_logo {
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 300px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
+
+.dvb_view > .dvb_view_menu {
+    position: absolute;
+    left: 0;
+    top: 155px;
+    background-color: #009ee3;
+    padding: 5px;
+    min-height: 130px;
+    min-height: 30%;
+    width: 113px;
+    overflow-y: hidden;
+    /*overflow-x: hidden;*/
+}
+
+.dvb_view_menu-previous-page,
+.dvb_view_menu-next-page {
+    display: block;
+    width: 100%;
+    height: 16px;
+    text-align: center;
+    color: white;
+    background-color: #0488C2;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.dvb_view_menu-previous-page-icon,
+.dvb_view_menu-next-page-icon {
+    width: 14px;
+    height: 12px;
+    display: block;
+    position: relative;
+    top: 2px;
+    left: 50px;
+    background-repeat: no-repeat;
+}
+
+.dvb_view_menu-previous-page-icon {
+    background-image:  url(http://www.devisubox.com/dv/resource/js/dvb_view/img/arrow_up.png);
+}
+
+.dvb_view_menu-next-page-icon {
+    background-image:  url(http://www.devisubox.com/dv/resource/js/dvb_view/img/arrow_down.png);
+}
+
+.dvb_view_menu-previous-page.disabled,
+.dvb_view_menu-next-page.disabled {
+    background-color: #005074;
+    cursor: default;
+}
+
+.dvb_view_menu-previous-page {
+}
+
+.dvb_view_menu-next-page {
+}
+
+.dvb_view > .dvb_view_date {
+    cursor: default;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 43px;
+    text-align: right;
+    text-shadow: 2px 2px 1px black;
+}
+
+.dvb_view_social {
+    position: absolute;
+    top: 230px;
+    right: 35px;
+    text-align: center;
+    /*background-color: #009ee3;*/
+    height: 22px;
+}
+
+.dvb_view_sites-container {
+    position: absolute;
+    top: 10px;
+    padding-bottom: 25px;
+}
+
+.dvb_view_site {
+    cursor: pointer;
+}
+
+.dvb_view_site-title {
+    overflow: hidden;
+}
+
+.dvb_view_site-title-container {
+    font-family: sans-serif;
+    height: 20px;
+    position: relative;
+    top: 20px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    width: 113px;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+    overflow: hidden;
+}
+
+.dvb_view_site-title-container:first {
+    margin-top: 0;
+}
+
+.dvb_view_site-image {
+    max-height: 90px;
+}
+
+.dvb_view_share {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 3px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.fm-body > .dvb_view_share {
+    display: inline-block !important;
+}
+
+.dvb_view_social-facebook {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/facebook_ico.png);
+}
+
+.dvb_view_social-twitter {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/twitter_ico.png);
+}
+
+.dvb_view_social-googleplus {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/googleplus_ico.png);
+}
+
+.dvb_view_social-linkedin {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/linkedin_ico.png);
+}
+
+.dvb_view_social-flickr {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/flickr_ico.png);
+}
+
+.dvb_view_social-pinterest {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/pinterest_ico.png);
+}
+
+.dvb_view_social-email {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/email_ico.png);
+}
+
+.dvb_view_social-permalink {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/permalink_ico.png);
+}
+
+.dvb_view_timescope-selector {
+    position: absolute;
+    bottom: 67px;
+    left: 235px;
+    background-color: #009ee3;
+    color: #fff;
+    /*text-shadow: 1px 1px 1px black;*/
+    width: 190px;
+    height: 57px;
+    text-align: center;
+    font-size: 30px;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.dvb_view_timescope-selector-title {
+    font-size: 21px;
+    position: relative;
+    top: 8px;
+    white-space: nowrap;
+    /*font-weight: bold;*/
+}
+
+.dvb_view_timescope-selector-content {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.dvb_view_prompt-filter,
+.dvb_view_prompt-browser,
+.dvb_view_prompt-motd {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 550px;
+    height: 250px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+.browser-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 10px;
+}
+
+.dvb_view_prompt-browser-* {
+    background-color: #333;
+}
+
+.chrome-icon {
+    background-image: url(http://www.devisubox.com/dv/resource/image/browser-logos/chrome_32x32.png);
+}
+
+.firefox-icon {
+    background-image: url(http://www.devisubox.com/dv/resource/image/browser-logos/firefox_32x32.png);
+}
+
+.safari-icon {
+    background-image: url(http://www.devisubox.com/dv/resource/image/browser-logos/safari_32x32.png);
+}
+
+.opera-icon {
+    background-image: url(http://www.devisubox.com/dv/resource/image/browser-logos/opera_32x32.png);
+}
+
+.dvb_view_prompt-browser {
+    width: 600px;
+    height: 235px;
+}
+
+.dvb_view_prompt-title {
+    font-size: 21px;
+    position: relative;
+    top: 20px;
+}
+
+.dvb_view_prompt-filter > .dvb_view_prompt-content {
+    margin-top: 105px;
+    font-size: 16px;
+}
+
+.dvb_view_prompt-browser > .dvb_view_prompt-content {
+    margin-top: 35px;
+    font-size: 16px;
+}
+
+.dvb_view_prompt-content > .dvb_button {
+    background-color: #333;
+}
+
+.dvb_view_watermark {
+    width: 261px;
+    height: 50px;
+    cursor: pointer;
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/logo_large.png);
+}
+
+.dvb_view > .dvb_view_watermark {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+}/*
+
+.dvb_view_toolbar > .dvb_view_watermark {
+    width: 261px;
+    height: 50px;
+    cursor: pointer;
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/logo_large.png);
+}*/
+
+.dvb_view_watermark-small {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/logo_small.png);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.dvb_view_toolbar > .dvb_view_watermark-small,
+.dvb_view_toolbar > .dvb_view_watermark-large {
+    float: right;
+}
+
+.dvb_view_toolbar > .dvb_view_watermark-large {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/logo_large.png);
+    width: 253px;
+    height: 52px;
+    cursor: pointer;
+    position: relative;
+    left: 205px;
+}
+
+.dvb_view_watermark-large.svg {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/logo_large.svg);
+}
+
+.dvb_view_prompt-version {
+    width: 300px;
+    height: 135px;
+    background-color: #333;
+    position: absolute;
+    bottom: 55px;
+    right: -300px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 5px;
+}
+
+/*====================*/
+/*   Toolbar layout   */
+/*====================*/
+
+.dvb_view_toolbar {
+    position: absolute;
+    overflow-x: hidden !important;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    background-color: #333;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    opacity: 0.5;
+    z-index: 2;
+    filter: Alpha(opacity=50);
+}
+
+.dvb_view_toolbar > * {
+    display: inline-block;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.dvb_view_toolbar > .dvb_view_date {
+    text-align: center;
+    /*width: 80px;*/
+    width: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dvb_view_date-month-year {
+    background-color: #87A82E;
+    color: white;
+    font-size: 18px;
+    height: 20px;
+    width: 60px;
+    float: left;
+}
+
+.dvb_view_date-day {
+    background-color: white;
+    color: black;
+    height: 32px;
+    width: 60px;
+    font-size: 29px;
+    float: left;
+}
+
+.dvb_view_date-time {
+    float: right;
+    color: #BBB;
+    font-size: 14px;
+    display: none;
+}
+
+.dvb_view_menu-pop {
+    position: absolute;
+    display: none;
+}
+
+.dvb_view_toolbar > .dvb_view_menu {
+    font-weight: bold;
+    /*padding-top: 5px;*/
+    height: 100%;
+    font-size: 21px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.svg {
+    background-size: contain;
+}
+
+.dvb_view_settings,
+.dvb_view_menu-icon,
+.dvb_view_fullscreen-toggle,
+.dvb_view_share-icon {
+    display: inline-block;
+    width: 52px;
+    cursor: pointer;
+    height: 52px;
+}
+
+.dvb_view_settings:hover,
+.dvb_view_menu-icon:hover,
+.dvb_view_fullscreen-toggle:hover,
+.dvb_view_share-icon:hover {
+    filter: alpha(opacity= 50);
+    opacity: 0.5;
+}
+
+.dvb_view_menu-icon {
+    background: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/box.png);
+}
+
+.dvb_view_menu-icon.svg {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/box.svg);
+}
+
+.dvb_view_settings {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/settings.png);
+}
+
+.dvb_view_settings.svg {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/settings.svg);
+}
+
+.dvb_view_fullscreen-toggle {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/fullscreen.png);
+}
+
+.dvb_view_fullscreen-toggle.svg {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/fullscreen.svg);
+}
+
+.dvb_view_share-icon {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/share.png);
+}
+
+.dvb_view_share-icon.svg {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/share.svg);
+}
+
+.dvb_view_fullscreen-toggle.off {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/fullscreen_off.png);
+}
+
+.dvb_view_fullscreen-toggle.off.svg {
+    background-image: url(http://www.devisubox.com/dv/resource/js/dvb_view/img/icons/fullscreen_off.svg);
+}
+
+.dvb_view > .dvb_view_fullscreen-toggle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.dvb_view > .dvb_menu-wrap {
+    position: absolute;
+    display: none;
+}
+
+.dvb_view_site-toolbar {
+    display: inline-block !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.dvb_view_site-title-toolbar {
+    display: block;
+    text-align: center;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dvb_view_site-image-toolbar {
+    display: block;
+}
+
+.dvb_view_site-toolbar.current {
+    cursor: default;
+}
+
+.dvb_view_site-toolbar.current > .dvb_view_site-title-toolbar {
+    font-weight: bold;
+    color: #009ee3;
+}
+
+
+.keyboard_key {
+    display: inline-block !important;
+    font-family: monospace;
+    font-size: 14px;
+    color: black;
+    padding: 2px 10px !important;
+    background-color: #F7F7F7;
+    border: solid 1px #ddd;
+    border-radius: 2px;
+    width: 10px;
+    text-align: center;
+    margin-right: 3px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
