@@ -1,9 +1,8 @@
 <?php
 //pour test !!
-require "./profileTemplate.php";
+//require "./profileTemplate.php";
 
-echo "test";
-createProfile("Bobb","lstName","Pseudal","202020","avatar","isPublic");
+//createProfile("Bobb","lstName","Pseudal","202020","avatar","isPublic");
 
 
 	require_once '../mysql_password.php';
