@@ -1,0 +1,64 @@
+.dvb_button {
+    cursor: pointer;
+    background-color: #009ee3;
+    color: #fff;
+    font-family: Cabin, Arial, Helvetica, sans-serif;
+    padding: 7px 18px;
+}
+
+.dvb_button-xs {
+    padding: 4px 14px;
+    font-size: 10px;
+}
+
+.dvb_button-s {
+    padding: 5px 15px;
+    font-size: 12px;
+}
+
+.dvb_button-l {
+    padding: 13px 25px;
+    font-size: 16px;
+}
+
+.dvb_button-xl {
+    padding: 15px 27px;
+    font-size: 17px;
+}
+
+.dvb_button-green {
+    background-color: #95c11e;
+}
+
+.dvb_button-selected,
+.dvb_button-disabled {
+	cursor: default;
+}
+
+.dvb_button-selected {
+    background-color: #4585AF;
+	text-decoration: underline;
+}
+
+.dvb_button-green.dvb_button-selected {
+    background-color: #85aa43;
+}
+
+
+.dvb_button-disabled {
+    background-color: #89a0af;
+}
+
+.dvb_button-green.dvb_button-disabled {
+    background-color: #acb995;
+}
+
+.dvb_button:hover:not(.dvb_button-disabled),
+.dvb_button:focus:not(.dvb_button-disabled) {
+	text-decoration: underline;
+}
+
+.dvb_button-selected:hover:not(.dvb_button-disabled),
+.dvb_button-selected:focus:not(.dvb_button-disabled) {
+	text-decoration: none;
+}

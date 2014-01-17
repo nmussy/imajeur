@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>batimat</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="lib/dvb_view/dvb_view.css">
+        <link rel="stylesheet" href="lib/dvb_viewer/dvb_viewer.css">
+        <link rel="stylesheet" href="lib/dvb_viewone/dvb_viewone.css">
+        <link rel="stylesheet" href="lib/dvb_button/dvb_button.css">
+        <link rel="stylesheet" href="lib/jquery-ui-slider/css/ui-lightness/jquery-ui-1.10.3.custom.min.css">
+        <link rel="stylesheet" href="lib/dvb_menu/dvb_menu.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <style type="text/css">
+            body {
+                margin:0;
+                background-color: #FFF5FC;
+                overflow-x: hidden;
+            }
+        </style>
+        <style type="text/css"></style><style type="text/css">.hidden{display:none}</style>
+    </head>
+        <body data-layout-type="xdesktop" style="">
+
+            <div id="view"></div>
+
+            <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+            <script src="js/plugins.js"></script>
+            <script src="lib/hammer/jquery.hammer.min.js"></script>
+            <script src="lib/jquery-udraggable-hammer/jquery.udraggable-0.2.0-hammer.js"></script>
+            <script src="lib/jquery-fullscreen/jquery.fullscreen-min.js"></script>
+            <script src="lib/jquery-ui-1.10.3.min.js"></script>
+            <script src="lib/jquery-browser-plugin-0.05/jquery.browser.min.js"></script>
+    		<script src="lib/dvb_view/dvb_view.js"></script>
+            <script src="lib/dvb_viewer/dvb_viewer.js"></script>
+            <script src="lib/dvb_viewone/dvb_viewone.js"></script>
+            <script src="lib/dvb_responsive/dvb_responsive.js"></script>
+            <script src="lib/jquery.cookie/jquery.cookie.js"></script>
+            <script src="lib/dvb_menu/dvb_menu.js"></script>
+            <script src="lib/dvb_svgify/dvb_svgify.js"></script>
+
+
+            <script type="text/javascript">
+    	       $(document).ready(function() {
+                    $('#view').dvb_view({
+                        tId: [5738,5740,5743],                    
+                        sOrderBy: 'ORDER BY dv_photo.nDatePost DESC',
+                        sLogoTarget: 'http://www.devisubox.com/',
+                        fullscreen: true,
+                        slideTransition: 'fadeSync',
+                        siteTransition: 'slide'
+                    });
+                });
+            </script>
+    </body>
+</html>
