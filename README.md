@@ -23,6 +23,13 @@ imajeur.fr
 
 ## Joris
 
+* PHP de tout
+* Inscription à faire marcher
+* Connexion, avec la session PHP créee
+* L'upload d'images PHP-side, je vais peut-être le faire
+* L'envoi de la liste d'imajeries par utilisateur, avec leurs ids, et le lien d'une image, la dernière chronologiquement mettons
+* L'envoi de la liste d'images composant l'imajerie
+
 # Lexik
 * imajeur : Utilisateur d'imajeur, son profil ("un imajeur", à la Facebook)
 * imaje : Image sur imajeur
