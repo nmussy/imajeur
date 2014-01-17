@@ -108,7 +108,7 @@ function sumbitRegister(e) {
 
     var data = $('#registerForm').serializeArray();
     data.push({'name': 'gender', 'value': $('#selectGender').children('.disabled').data('value')});
-
+    console.log("balblabla");
     $.ajax({
         url: '../php/user/inscription.php',
         type: 'post',
